@@ -2,7 +2,12 @@
     <h1>{{ msg }}</h1>
 
     <p>{{ moment(new Date()).format('dddd LL') }}</p>
-    <!-- <p>{{ new Date() }}</p> -->
+    
+    <div>
+        <input v-model="num" />
+
+        <p>Number: {{ num }}</p>
+    </div>
 
 </template>
 
@@ -13,6 +18,11 @@
         name: 'HelloWorld',
         props: {
             msg: String
+        },
+        data() {
+            return {
+                num: ''
+            }
         },
         created: function () {
             this.moment = moment;
