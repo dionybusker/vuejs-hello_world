@@ -4,9 +4,11 @@
     <p>{{ moment(new Date()).format('dddd LL') }}</p>
     
     <div>
-        <input v-model="num" />
+        <input v-model="num" type="number" />
 
-        <p>Number: {{ num }}</p>
+        <p>Number: {{ num + counter }}</p>
+
+        <button @click="counter += num">Add</button>
     </div>
 
 </template>
@@ -21,7 +23,8 @@
         },
         data() {
             return {
-                num: ''
+                num: 0,
+                counter: 0
             }
         },
         created: function () {
