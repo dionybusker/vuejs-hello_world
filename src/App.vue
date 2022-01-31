@@ -21,6 +21,6 @@
     }
 
     img {
-        width: 25%;
+        width: 25vh;
     }
 </style>
